@@ -10,12 +10,12 @@
 
 int main(void) {
     int pounds;
-    float kilos;
-    
+    float kiloCon, kilos;
+    kiloCon = 2.21;
     
     std::cout << "How much do you weigh in pounds? ";
     std::cin >> pounds;
-    kilos = pounds / 2.21;
+    kilos = pounds / kiloCon;
     std::cout << "You weigh " << kilos << " kilos" << std::endl;
 
 }
