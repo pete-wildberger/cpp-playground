@@ -9,10 +9,13 @@
 #include <iostream>
 
 int main(void) {
-    char Name[21];
+    int pounds;
+    float kilos;
     
-    std::cout << "What is your name?";
-    std::cin >> Name;
-    std::cout << "Good morning " << Name << std::endl;
+    
+    std::cout << "How much do you weigh in pounds? ";
+    std::cin >> pounds;
+    kilos = pounds / 2.21;
+    std::cout << "You weigh " << kilos << " kilos" << std::endl;
 
 }
