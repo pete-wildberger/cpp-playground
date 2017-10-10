@@ -9,6 +9,7 @@
 #include <iostream>
 #include <math.h>
 #include <iomanip>
+#define PI (3.141592653589793)
 
 //int main() {
 //    int pounds;
@@ -23,7 +24,7 @@
 //
 //}
 int main() {
-    const float PI = 3.14159;
+//    const float PI = 3.14159;
     double Volume, Radius, Height;
     std::cout << "This program tells you the volume of a cylinder. \n";
     std::cout << "How tall is the tank in inches?\n";
@@ -31,7 +32,8 @@ int main() {
     std::cout << "What is the radius of the tank in inches?\n";
     std::cin >> Radius;
     Volume = (PI * pow(Radius, 2)) * Height;
-    std::cout << "The tank's volume is "<< std::setprecision(4) << Volume << "inches cubed!\n";
-    std::cout << PI << Radius << "^"<< 2 << "=" << std::setprecision(4) << Volume << "\n";
+    std::cout << std::setprecision(2) << std::setiosflags(std::ios::fixed);
+    std::cout << "The tank's volume is "<< Volume << "inches cubed!\n";
+    std::cout << PI << "*"<< Radius << "^"<< 2 << "=" << Volume << "\n";
     return 0;
 }
