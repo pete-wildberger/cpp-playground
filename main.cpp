@@ -23,17 +23,29 @@
 //    return 0;
 //
 //}
-int main() {
-//    const float PI = 3.14159;
-    double Volume, Radius, Height;
-    std::cout << "This program tells you the volume of a cylinder. \n";
-    std::cout << "How tall is the tank in inches?\n";
-    std::cin >> Height;
-    std::cout << "What is the radius of the tank in inches?\n";
-    std::cin >> Radius;
-    Volume = (PI * pow(Radius, 2)) * Height;
-    std::cout << std::setprecision(2) << std::setiosflags(std::ios::fixed);
-    std::cout << "The tank's volume is "<< Volume << "inches cubed!\n";
-    std::cout << PI << "*"<< Radius << "^"<< 2 << "=" << Volume << "\n";
+//int main() {
+////    const float PI = 3.14159;
+//    char Ch;
+//    double Volume, Radius, Height;
+//    std::cout << "This program tells you the volume of a cylinder. \n";
+//    std::cout << "How tall is the tank in inches?\n";
+//    std::cin >> Height;
+//    std::cout << "What is the radius of the tank in inches?\n";
+//    std::cin >> Radius;
+//    std::cout << "This program is paused. Press Enter to continue. \n";
+//    std::cin.get(Ch);
+//    std::cout << std::setprecision(2) << std::setiosflags(std::ios::fixed);
+//    Volume = (PI * pow(Radius, 2)) * Height;
+//       std::cout << "The tank's volume is "<< Volume << "inches cubed!\n";
+//    std::cout << PI << "*"<< Radius << "^"<< 2 << "=" << Volume << "\n";
+//    return 0;
+//}
+int main(){
+    char Ch;
+    std::cout << "Type a character and press Enter: \n";
+    std::cin.get(Ch);
+    std::cout << "You entered " << Ch << std::endl;
+    std::cout << "Its ASCII code is " << int(Ch) << std::endl;
+    
     return 0;
 }
