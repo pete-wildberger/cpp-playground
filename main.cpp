@@ -41,11 +41,23 @@
 //    return 0;
 //}
 int main(){
-    char Ch;
-    std::cout << "Type a character and press Enter: \n";
-    std::cin.get(Ch);
-    std::cout << "You entered " << Ch << std::endl;
-    std::cout << "Its ASCII code is " << int(Ch) << std::endl;
+    float Length, Width, Height, Volume, Cost, CCost, CCharge, Charge, Profit;
+    Cost = 0.23;
+    Charge = 0.50;
     
+    std::cout << "What is the length of the crate? \n";
+    std::cin >> Length;
+    std::cout << "What is the width of the crate? \n";
+    std::cin >> Width;
+    std::cout << "What is the height of the crate? \n";
+    std::cin >> Height;
+    Volume = Length * Width * Height;
+    CCost = Volume * Cost;
+    CCharge = Volume * Charge;
+    Profit = CCharge - CCost;
+    std::cout << std::setprecision(2) << std::setiosflags(std::ios::fixed);
+    std::cout << "The crate costs $" << CCost << " to produce. \n";
+    std::cout << "We will charge $" << CCharge << " per crate. \n";
+    std::cout << "We will make $" << Profit << " in profit per crate. \n";
     return 0;
 }
