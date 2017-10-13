@@ -41,6 +41,7 @@
 //    return 0;
 //}
 int main(){
+    int money = 0;
     float Length, Width, Height, Volume, Cost, CCost, CCharge, Charge, Profit;
     Cost = 0.23;
     Charge = 0.50;
@@ -58,10 +59,17 @@ int main(){
     std::cout << std::setprecision(2) << std::setiosflags(std::ios::fixed);
     if(Profit <= 0){
         std::cout  << "we can't make that! \n";
-    } else {
+    }
+    if (Profit >= 100){
+        money = 1;
+    }
     std::cout << "The crate costs $" << CCost << " to produce. \n";
     std::cout << "We will charge $" << CCharge << " per crate. \n";
     std::cout << "We will make $" << Profit << " in profit per crate. \n";
+    
+    if(money == 1){
+        std::cout << "we're gonna make some money\n";
+
     }
     return 0;
 }
