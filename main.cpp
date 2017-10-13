@@ -9,6 +9,7 @@
 #include <iostream>
 #include <math.h>
 #include <iomanip>
+#include <string>
 #define PI (3.141592653589793)
 
 //int main() {
@@ -40,36 +41,51 @@
 //    std::cout << PI << "*"<< Radius << "^"<< 2 << "=" << Volume << "\n";
 //    return 0;
 //}
+//int main(){
+//    int money = 0;
+//    float Length, Width, Height, Volume, Cost, CCost, CCharge, Charge, Profit;
+//    Cost = 0.23;
+//    Charge = 0.50;
+//    
+//    std::cout << "What is the length of the crate? \n";
+//    std::cin >> Length;
+//    std::cout << "What is the width of the crate? \n";
+//    std::cin >> Width;
+//    std::cout << "What is the height of the crate? \n";
+//    std::cin >> Height;
+//    Volume = Length * Width * Height;
+//    CCost = Volume * Cost;
+//    CCharge = Volume * Charge;
+//    Profit = CCharge - CCost;
+//    std::cout << std::setprecision(2) << std::setiosflags(std::ios::fixed);
+//    if(Profit <= 0){
+//        std::cout  << "we can't make that! \n";
+//    }
+//    if (Profit >= 100){
+//        money = 1;
+//    }
+//    std::cout << "The crate costs $" << CCost << " to produce. \n";
+//    std::cout << "We will charge $" << CCharge << " per crate. \n";
+//    std::cout << "We will make $" << Profit << " in profit per crate. \n";
+//    
+//    if(money == 1){
+//        std::cout << "we're gonna make some money\n";
+//
+//    }
+//    return 0;
+//}
 int main(){
-    int money = 0;
-    float Length, Width, Height, Volume, Cost, CCost, CCharge, Charge, Profit;
-    Cost = 0.23;
-    Charge = 0.50;
+    char input1[11], input2[11];
     
-    std::cout << "What is the length of the crate? \n";
-    std::cin >> Length;
-    std::cout << "What is the width of the crate? \n";
-    std::cin >> Width;
-    std::cout << "What is the height of the crate? \n";
-    std::cin >> Height;
-    Volume = Length * Width * Height;
-    CCost = Volume * Cost;
-    CCharge = Volume * Charge;
-    Profit = CCharge - CCost;
-    std::cout << std::setprecision(2) << std::setiosflags(std::ios::fixed);
-    if(Profit <= 0){
-        std::cout  << "we can't make that! \n";
-    }
-    if (Profit >= 100){
-        money = 1;
-    }
-    std::cout << "The crate costs $" << CCost << " to produce. \n";
-    std::cout << "We will charge $" << CCharge << " per crate. \n";
-    std::cout << "We will make $" << Profit << " in profit per crate. \n";
-    
-    if(money == 1){
-        std::cout << "we're gonna make some money\n";
-
+    std::cout << "Enter a string: \n";
+    std::cin.getline(input1, 11);
+    std::cout << "Enter another string: \n";
+    std::cin.width(10);
+    std::cin.getline(input2, 11);
+    if(!strcmp(input1, input2)){
+        std::cout << "The strings are the same!\n";
+    } else {
+        std::cout << "The strings are different!\n";
     }
     return 0;
 }
