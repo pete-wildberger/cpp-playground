@@ -56,10 +56,12 @@ int main(){
     CCharge = Volume * Charge;
     Profit = CCharge - CCost;
     std::cout << std::setprecision(2) << std::setiosflags(std::ios::fixed);
+    if(Profit <= 0){
+        std::cout  << "we can't make that! \n";
+    } else {
     std::cout << "The crate costs $" << CCost << " to produce. \n";
     std::cout << "We will charge $" << CCharge << " per crate. \n";
     std::cout << "We will make $" << Profit << " in profit per crate. \n";
-    if(Profit <= 0)
-        std::cout  << "we can't make that! \n";
+    }
     return 0;
 }
