@@ -74,6 +74,8 @@
 //    }
 //    return 0;
 //}
+void displayString(char[], char[]);
+
 void same(void){
     std::cout << "The strings are the same!\n";
 }
@@ -93,5 +95,10 @@ int main(){
             } else {
         different();
     }
+    displayString(input1, input2);
     return 0;
+}
+
+void displayString(char in1[], char in2[]) {
+    std::cout << in1 << in2 << "\n";
 }
