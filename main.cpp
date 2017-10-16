@@ -74,6 +74,12 @@
 //    }
 //    return 0;
 //}
+void same(void){
+    std::cout << "The strings are the same!\n";
+}
+void different(void){
+    std::cout << "The strings are different!\n";
+}
 int main(){
     char input1[11], input2[11];
     
@@ -83,9 +89,9 @@ int main(){
     std::cin.width(10);
     std::cin.getline(input2, 11);
     if(!strcmp(input1, input2)){
-        std::cout << "The strings are the same!\n";
-    } else {
-        std::cout << "The strings are different!\n";
+        same();
+            } else {
+        different();
     }
     return 0;
 }
