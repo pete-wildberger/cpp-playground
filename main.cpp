@@ -74,31 +74,46 @@
 //    }
 //    return 0;
 //}
-void displayString(char[], char[]);
-
-void same(void){
-    std::cout << "The strings are the same!\n";
-}
-void different(void){
-    std::cout << "The strings are different!\n";
-}
+//void displayString(char[], char[]);
+//
+//void same(void){
+//    std::cout << "The strings are the same!\n";
+//}
+//void different(void){
+//    std::cout << "The strings are different!\n";
+//}
+//int main(){
+//    char input1[11], input2[11];
+//    
+//    std::cout << "Enter a string: \n";
+//    std::cin.getline(input1, 11);
+//    std::cout << "Enter another string: \n";
+//    std::cin.width(10);
+//    std::cin.getline(input2, 11);
+//    if(!strcmp(input1, input2)){
+//        same();
+//            } else {
+//        different();
+//    }
+//    displayString(input1, input2);
+//    return 0;
+//}
+//
+//void displayString(char in1[], char in2[]) {
+//    std::cout << in1 << in2 << "\n";
+//}
+// recursive functions
+void Message(int);
 int main(){
-    char input1[11], input2[11];
-    
-    std::cout << "Enter a string: \n";
-    std::cin.getline(input1, 11);
-    std::cout << "Enter another string: \n";
-    std::cin.width(10);
-    std::cin.getline(input2, 11);
-    if(!strcmp(input1, input2)){
-        same();
-            } else {
-        different();
-    }
-    displayString(input1, input2);
+    Message(5);
     return 0;
 }
-
-void displayString(char in1[], char in2[]) {
-    std::cout << in1 << in2 << "\n";
+void Message(int Times){
+    std::cout << "Message called with " << Times << " in Times. \n";
+    if( Times > 0){
+        std::cout << "This is a recursive function. \n";
+        Message(Times -1);
+    }
+    std::cout << "Message returning with " << Times;
+    std::cout << " in Times. \n";
 }
