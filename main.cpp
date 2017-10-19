@@ -103,17 +103,25 @@
 //    std::cout << in1 << in2 << "\n";
 //}
 // recursive functions
-void Message(int);
+//void Message(int);
+//int main(){
+//    Message(5);
+//    return 0;
+//}
+//void Message(int Times){
+//    std::cout << "Message called with " << Times << " in Times. \n";
+//    if( Times > 0){
+//        std::cout << "This is a recursive function. \n";
+//        Message(Times -1);
+//    }
+//    std::cout << "Message returning with " << Times;
+//    std::cout << " in Times. \n";
+//}
 int main(){
-    Message(5);
-    return 0;
-}
-void Message(int Times){
-    std::cout << "Message called with " << Times << " in Times. \n";
-    if( Times > 0){
-        std::cout << "This is a recursive function. \n";
-        Message(Times -1);
+    int ascii[256];
+    for(int i = 0; i < 256; i++){
+        ascii[i] = i;
+        std::cout << i << "  " << char(ascii[i]) << std::endl;
     }
-    std::cout << "Message returning with " << Times;
-    std::cout << " in Times. \n";
+    return 0;
 }
