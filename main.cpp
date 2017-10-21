@@ -10,6 +10,7 @@
 #include <math.h>
 #include <iomanip>
 #include <string>
+#include "Header.h"
 #define PI (3.141592653589793)
 
 //int main() {
@@ -117,11 +118,63 @@
 //    std::cout << "Message returning with " << Times;
 //    std::cout << " in Times. \n";
 //}
+//int main(){
+//    int ascii[256];
+//    for(int i = 0; i < 256; i++){
+//        ascii[i] = i;
+//        std::cout << i << "  " << char(ascii[i]) << std::endl;
+//    }
+//    return 0;
+//}
+const int arrSize = 20;
+
+class answer {
+public:
+    int index;
+    int answer;
+};
+
 int main(){
-    int ascii[256];
-    for(int i = 0; i < 256; i++){
-        ascii[i] = i;
-        std::cout << i << "  " << char(ascii[i]) << std::endl;
+    int tests[arrSize] = {25, 65, 98, 45, 86,
+        17, 90, 100, 37, 83,
+        37, 43, 76, 59, 94,
+        82, 69, 46, 99, 28};
+    int score;
+    
+    std::cout << "enter a number between 1-100: ";
+    std::cin >> score;
+    
+    answer results = binarySearch(tests, arrSize, score);
+    if (results.answer == -1){
+        std::cout << "That number is not in the array. \n";
+    } else {
+        std::cout << "We found it! "<< results.answer << " It was in position " << results.index << std::endl;
     }
+    
     return 0;
 }
+
+class answer binarySearch( int array[], int arrSize, int score){
+    int first = 0;
+    int last = arrSize - 1;
+    int middle;
+    while(first <= last){
+        middle = first + (last - first) / 2;
+        if(array[middle] == score){
+            answer results;
+            results.index = middle;
+            results.answer = score;
+            return results;
+        } else if (array[middle] > score){
+            last = middle - 1;
+        } else {
+            first = middle + 1;
+        }
+    }
+    // not found
+    answer results;
+    results.index = -1;
+    results.answer = -1;
+    return results;
+}
+
