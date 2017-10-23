@@ -141,7 +141,7 @@ int main(){
         82, 69, 46, 99, 28};
     int score;
 //    sort the array
-    bubbleSort(tests, arrSize);
+    selectionSort(tests, arrSize);
     
 //    user input
     std::cout << "enter a number between 1-100: ";
@@ -198,3 +198,19 @@ void bubbleSort(int arr[], int length){
     } while(swap != 0);
 }
 
+// selection sort
+void selectionSort(int arr[], int length){
+    int start, minIndex, minValue;
+    for(start = 0; start < (length -1); start++){
+        minIndex = start;
+        minValue = arr[start];
+        for(int index = start + 1; index < length; index++){
+            if(arr[index] < minValue){
+                minValue = arr[index];
+                minIndex = index;
+            }
+        }
+        arr[minIndex] = arr[start];
+        arr[start] = minValue;
+    }
+}

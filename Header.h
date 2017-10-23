@@ -13,3 +13,4 @@
 #endif /* Header_h */
 class answer binarySearch(int[], int, int);
 void bubbleSort(int[], int);
+void selectionSort(int[], int);
