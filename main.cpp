@@ -140,7 +140,10 @@ int main(){
         37, 43, 76, 59, 94,
         82, 69, 46, 99, 28};
     int score;
+//    sort the array
+    bubbleSort(tests, arrSize);
     
+//    user input
     std::cout << "enter a number between 1-100: ";
     std::cin >> score;
     
@@ -154,6 +157,7 @@ int main(){
     return 0;
 }
 
+// Binary Search funciton.  Searches an array for a integer value in an integer array.  Returns an answer object.
 class answer binarySearch( int array[], int arrSize, int score){
     int first = 0;
     int last = arrSize - 1;
@@ -176,5 +180,21 @@ class answer binarySearch( int array[], int arrSize, int score){
     results.index = -1;
     results.answer = -1;
     return results;
+}
+
+// Bubble sort funtion. Sorts an array in ascending order.
+void bubbleSort(int arr[], int length){
+    int swap, temp;
+    do{
+        swap = 0;
+        for (int i = 0; i < (length-1); i++) {
+            if(arr[i] > arr[i]+1){
+                temp = arr[i];
+                arr[i] = arr[i + 1];
+                arr[i + 1] = temp;
+                swap = 1;
+            }
+        }
+    } while(swap != 0);
 }
 
