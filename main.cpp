@@ -126,91 +126,103 @@
 //    }
 //    return 0;
 //}
-const int arrSize = 20;
-
-class answer {
-public:
-    int index;
-    int answer;
-};
+//const int arrSize = 20;
+//
+//class answer {
+//public:
+//    int index;
+//    int answer;
+//};
+//
+//int main(){
+//    int tests[arrSize] = {25, 65, 98, 45, 86,
+//        17, 90, 100, 37, 83,
+//        37, 43, 76, 59, 94,
+//        82, 69, 46, 99, 28};
+//    int score;
+////    sort the array
+//    selectionSort(tests, arrSize);
+//    
+////    user input
+//    std::cout << "enter a number between 1-100: ";
+//    std::cin >> score;
+//    
+//    answer results = binarySearch(tests, arrSize, score);
+//    if (results.answer == -1){
+//        std::cout << "That number is not in the array. \n";
+//    } else {
+//        std::cout << "We found it! "<< results.answer << " It was in position " << results.index << std::endl;
+//    }
+//    
+//    return 0;
+//}
+//
+//// Binary Search funciton.  Searches an array for a integer value in an integer array.  Returns an answer object.
+//class answer binarySearch( int array[], int arrSize, int score){
+//    int first = 0;
+//    int last = arrSize - 1;
+//    int middle;
+//    while(first <= last){
+//        middle = first + (last - first) / 2;
+//        if(array[middle] == score){
+//            answer results;
+//            results.index = middle;
+//            results.answer = score;
+//            return results;
+//        } else if (array[middle] > score){
+//            last = middle - 1;
+//        } else {
+//            first = middle + 1;
+//        }
+//    }
+//    // not found
+//    answer results;
+//    results.index = -1;
+//    results.answer = -1;
+//    return results;
+//}
+//
+//// Bubble sort funtion. Sorts an array in ascending order.
+//void bubbleSort(int arr[], int length){
+//    int swap, temp;
+//    do{
+//        swap = 0;
+//        for (int i = 0; i < (length-1); i++) {
+//            if(arr[i] > arr[i]+1){
+//                temp = arr[i];
+//                arr[i] = arr[i + 1];
+//                arr[i + 1] = temp;
+//                swap = 1;
+//            }
+//        }
+//    } while(swap != 0);
+//}
+//
+//// selection sort
+//void selectionSort(int arr[], int length){
+//    int start, minIndex, minValue;
+//    for(start = 0; start < (length -1); start++){
+//        minIndex = start;
+//        minValue = arr[start];
+//        for(int index = start + 1; index < length; index++){
+//            if(arr[index] < minValue){
+//                minValue = arr[index];
+//                minIndex = index;
+//            }
+//        }
+//        arr[minIndex] = arr[start];
+//        arr[start] = minValue;
+//    }
+//}
 
 int main(){
-    int tests[arrSize] = {25, 65, 98, 45, 86,
-        17, 90, 100, 37, 83,
-        37, 43, 76, 59, 94,
-        82, 69, 46, 99, 28};
-    int score;
-//    sort the array
-    selectionSort(tests, arrSize);
-    
-//    user input
-    std::cout << "enter a number between 1-100: ";
-    std::cin >> score;
-    
-    answer results = binarySearch(tests, arrSize, score);
-    if (results.answer == -1){
-        std::cout << "That number is not in the array. \n";
-    } else {
-        std::cout << "We found it! "<< results.answer << " It was in position " << results.index << std::endl;
-    }
+    int x =25;
+    int *Ptr;
+    Ptr = &x;
+    std::cout << "The address of x is : " << Ptr << std::endl;
     
     return 0;
 }
 
-// Binary Search funciton.  Searches an array for a integer value in an integer array.  Returns an answer object.
-class answer binarySearch( int array[], int arrSize, int score){
-    int first = 0;
-    int last = arrSize - 1;
-    int middle;
-    while(first <= last){
-        middle = first + (last - first) / 2;
-        if(array[middle] == score){
-            answer results;
-            results.index = middle;
-            results.answer = score;
-            return results;
-        } else if (array[middle] > score){
-            last = middle - 1;
-        } else {
-            first = middle + 1;
-        }
-    }
-    // not found
-    answer results;
-    results.index = -1;
-    results.answer = -1;
-    return results;
-}
 
-// Bubble sort funtion. Sorts an array in ascending order.
-void bubbleSort(int arr[], int length){
-    int swap, temp;
-    do{
-        swap = 0;
-        for (int i = 0; i < (length-1); i++) {
-            if(arr[i] > arr[i]+1){
-                temp = arr[i];
-                arr[i] = arr[i + 1];
-                arr[i + 1] = temp;
-                swap = 1;
-            }
-        }
-    } while(swap != 0);
-}
 
-// selection sort
-void selectionSort(int arr[], int length){
-    int start, minIndex, minValue;
-    for(start = 0; start < (length -1); start++){
-        minIndex = start;
-        minValue = arr[start];
-        for(int index = start + 1; index < length; index++){
-            if(arr[index] < minValue){
-                minValue = arr[index];
-                minIndex = index;
-            }
-        }
-        arr[minIndex] = arr[start];
-        arr[start] = minValue;
-    }
-}
